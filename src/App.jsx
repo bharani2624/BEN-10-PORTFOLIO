@@ -14,7 +14,7 @@ function App() {
       const timer =setTimeout(()=>
         {
           setIsLoading(false);
-        },10000);
+        },1000);
         return ()=> clearTimeout(timer);
     },[])
   return (
@@ -27,9 +27,14 @@ function App() {
         </div>
       </div>
     ):(
+      
       <Router>
+        <div>
+          <Header/>
+          <Content/>
+        </div>
       <Routes>
-      <Route path='/' element={<Header/>}/>
+      <Route path='/Header' element={<Header/>}/>
       <Route path='/Achievements' element={<Achievements/>}/>
       <Route path='/Content' element={<Content/>}/>
       <Route path='/Footer' element={<Footer/>}/>

@@ -9,6 +9,8 @@ export default {
       fontFamily:
       {
         grobold:['GROBOLD','sans-serif'],
+        roboto:['Robot','sans-serif'],
+        domain:['Domain','serif']
       },
     },
   },
