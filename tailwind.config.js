@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:
+      {
+        grobold:['GROBOLD','sans-serif'],
+      },
     },
   },
   plugins: [],

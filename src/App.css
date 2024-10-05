@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'GROBOLD';
+  src: url("ben10-portfolio/src/font/GROBOLD.ttf")format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -42,4 +48,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
