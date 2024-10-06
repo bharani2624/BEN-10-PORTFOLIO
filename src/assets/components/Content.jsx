@@ -3,10 +3,9 @@ import abdimage from '../images/abdimage.png'
 import { ReactTyped } from "react-typed";
 const Content = () => {
     return (
-        <div className="w-screen flex px-5 py-5 space-y-6">
-            <div className="myself text-8xl text-white w-6/12 font-grobold relative
-            ">
-                <div className="w-6/12">
+        <div className="w-screen flex flex-col lg:flex-row px-4 lg:px-8 py-8 space-y-10 lg:space-x-10 lg:space-y-0">
+            <div className="myself text-5xl sm:text-6xl lg:text-8xl text-white w-full lg:w-6/12 font-grobold relative px-6 lg:px-10 py-6 lg:py-10 mt-5">
+                <div className="">
                     Welcome to,
                     <br />
                     <span className="text-green-600 font-grobold">
@@ -30,7 +29,7 @@ const Content = () => {
                         strings={[
                             "Hi <span style='color: gray;'>Visitor</span>,",
                         ]}
-                        typeSpeed={100} // Typing speed for the first line
+                        typeSpeed={100} 
                         backSpeed={0}
                         startDelay={2500}
                         showCursor={false}
@@ -40,9 +39,9 @@ const Content = () => {
                         strings={[
                             "You Have <span style='color: gray;'>Entered</span>",
                         ]}
-                        typeSpeed={100} // Typing speed for the second line
+                        typeSpeed={100} 
                         backSpeed={0}
-                        startDelay={4500} // Delay before starting the second line
+                        startDelay={4500} 
                         showCursor={false}
                     />
                     <br />
@@ -50,9 +49,9 @@ const Content = () => {
                         strings={[
                             "Into My <span style='color: gray;'>Reality</span>,",
                         ]}
-                        typeSpeed={100} // Typing speed for the third line
+                        typeSpeed={100} 
                         backSpeed={0}
-                        startDelay={6000} // Delay before starting the third line
+                        startDelay={6000} 
                         showCursor={false}
                     />
                     <br />
@@ -60,9 +59,9 @@ const Content = () => {
                         strings={[
                             "And You Are Gonna Learn <span style='color: gray;'>A Lot</span>",
                         ]}
-                        typeSpeed={100} // Typing speed for the fourth line
+                        typeSpeed={100} 
                         backSpeed={0}
-                        startDelay={7500} // Delay before starting the fourth line
+                        startDelay={7500} 
                         showCursor={false}
                     />
                     <br />
@@ -70,22 +69,22 @@ const Content = () => {
                         strings={[
                             "About <span style='color: gray;'>Me</span>",
                         ]}
-                        typeSpeed={100} // Typing speed for the fifth line
+                        typeSpeed={100} 
                         backSpeed={0}
-                        startDelay={8500} // Delay before starting the fifth line
+                        startDelay={8500} 
                         showCursor={false}
                     />
                 </div>
 
             </div>
-            <div className="myimage relative cursor-pointer flex justify-center items-center border-green-500 border rounded-2xl text-white text-5xl w-6/12 hover:border-no'">
+            <div className="myimage relative cursor-pointer flex justify-center items-center lg:w-6/12 px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-8 text-white text-5xl ">
                 <img
                     src={abdimage}
-                    className="h-full w-full rounded-2xl hover:opacity-80  hover:scale-105 transition-transform duration-300"
+                    className="h-full w-full border-white border-opacity-25 border rounded-2xl hover:opacity-80  hover:scale-105 transition-transform duration-300 ease-in-out"
                 />
                 <div className="absolute inset-0 flex justify-center items-center opacity-0 hover:opacity-90 transition-opacity duration-300 ease-in-out">
                     <span className="text-yellow-300 font-grobold text-3xl">
-                        <a href="https://www.linkedin.com/in/bharanidharaun-a-443b4a256">Wanna <span className="text-white">Know</span> More <br /> <center>About <span className="text-white">Me</span></center></a>
+                        <a href="https://www.linkedin.com/in/bharanidharaun-a-443b4a256">Wanna <span className="text-white">Know</span> More <br /> <center>About <span className="text-white hover:text-violet-700">Me</span></center></a>
                     </span>
                 </div>
             </div>
