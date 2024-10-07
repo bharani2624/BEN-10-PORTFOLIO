@@ -4,6 +4,7 @@ import '../src/animations/animate.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './assets/components/Header';
 import Achievements from './assets/components/Achievements';
+import About from './assets/components/About';
 import Content from './assets/components/Content';
 import Footer from './assets/components/Footer';
 import loader from '../src/assets/enhance/omnitrix.gif'
@@ -32,6 +33,7 @@ function App() {
         <div>
           <Header/>
           <Content/>
+          <About/>
         </div>
       <Routes>
       <Route path='/Header' element={<Header/>}/>
