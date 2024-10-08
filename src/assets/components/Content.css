@@ -1,0 +1,26 @@
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  
+  h1 span {
+    transition: 0.5s ease-in-out;
+  }
+  h1:hover span:nth-child(1){
+    margin-right: 5px;
+  }
+  h1:hover span:nth-child(1):after {
+    content: "HARANI";
+  }
+  h1:hover span:nth-child(2) {
+    margin-left: 5px;
+  }
+  h1:hover span:nth-child(2):after {
+    content:"HARAUN";
+  }
+  h1:hover span {
+    color: rgba(255, 255, 255, 0.467);
+    text-shadow: 0 0 0px #ffffff, 0 0 0px #fff, 0 0 0px #fff;
+  }

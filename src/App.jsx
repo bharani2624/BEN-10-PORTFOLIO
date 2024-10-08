@@ -32,7 +32,7 @@ function App() {
     const timer=setTimeout(()=>
       {
         setIsLoading(false);
-      },5000)
+      },15000)
       const quoteTimer=setInterval(()=>
         {
           const randomQuote=quotes[Math.floor(Math.random()*quotes.length)];
@@ -58,7 +58,7 @@ function App() {
     <div className="App">
       {isLoading ? (
         <div className="loader flex flex-col items-center justify-center h-screen w-screen">
-          <div className=" absolute inset-0 bg-cover bg-center filter blur-sm" style={backgroundPosition}></div>
+          <div className=" absolute inset-0 bg-cover bg-center filter blur-md" style={backgroundPosition}></div>
           <div className="relative w-6/12 h-24 space-y-2 flex flex-col items-center justify-center text-green-600 text-4xl text-center mt-4 border border-spacing-5 lg:h:24 lg:w-3/12">
             {quote?quote:"I am Just Being Over Confident."} <br />
             <span className='text-bold font-grobold text-2xl text-ben10'>
