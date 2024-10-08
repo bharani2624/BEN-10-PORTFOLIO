@@ -8,8 +8,7 @@ import About from './assets/components/About';
 import Content from './assets/components/Content';
 import Footer from './assets/components/Footer';
 import NeonProgressBar from './assets/components/NeonProgressBar/NeonProgressBar';
-import loader from '../src/assets/enhance/omnitrix.gif';
-
+import pod from './assets/images/bg.jpeg'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [quote, setQuote] = useState('');
@@ -23,35 +22,52 @@ function App() {
     "I can’t always win, but I never give up."
   ];
 
-  useEffect(() => {
-    // Set loading time to 10 seconds
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 100000);
+  // useEffect(() => {
+  //   // Set loading time to 10 seconds
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 10000);
 
-    // Display a new quote every 3 seconds during loading
-    const quoteTimer = setInterval(() => {
-      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-      setQuote(randomQuote);
-    }, 1500);
+  //   // Display a new quote every 3 seconds during loading
+  //   const quoteTimer = setInterval(() => {
+  //     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  //     setQuote(randomQuote);
+  //   }, 1500);
 
-    return () => {
-      clearTimeout(timer);
-      clearInterval(quoteTimer); // Clean up the interval when component unmounts
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timer);
+  //     clearInterval(quoteTimer); 
+  //   };
+  // }, []);
+  useEffect(()=>{
+    const timer=setTimeout(()=>
+      {
+        setIsLoading(false);
+      },10000)
+      const quoteTimer=setInterval(()=>
+        {
+          const randomQuote=quotes[Math.floor(Math.random()*quotes.length)];
+          setQuote(randomQuote);
+        },1500);
+        return()=>
+          {
+            clearTimeout(timer);
+            clearInterval(quoteTimer);
+          }
+  },[])
 
   return (
     <div className="App">
       {isLoading ? (
         <div className="loader flex flex-col items-center justify-center h-screen w-screen">
-          <div className="w-6/12 h-24 flex flex-col items-center justify-center text-green-600 text-xl text-center mt-4 border">
+          <div className=" absolute inset-0 bg-[url('./assets/images/bg.jpeg')] bg-cover bg-center filter blur-sm"></div>
+          <div className="relative w-6/12 h-24 space-y-2 flex flex-col items-center justify-center text-green-600 text-4xl text-center mt-4 border border-spacing-5 lg:h:24 lg:w-3/12">
             {quote?quote:"I am Just Being Over Confident."} <br />
-            <span className='text-bold font-grobold text-ben10'>
-              -BEN<span className='text-indigo-50 border-black border-opacity-25 font-grobold'>10</span>
+            <span className='text-bold font-grobold text-2xl text-ben10'>
+              -BEN<span className='text-white border-black border-opacity-25 font-grobold'>10</span>
             </span>
           </div>
-          <div className="neobar mt-6">
+          <div className="relative neobar mt-6">
             <NeonProgressBar />
           </div>
         </div>
