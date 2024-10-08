@@ -12,6 +12,7 @@ import pod from './assets/images/bg.jpeg'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [quote, setQuote] = useState('');
+  const [mousePosition,setmousePosition]=useState({x:0,y:0});
 
   const quotes = [
     "It's Hero Time!",
@@ -20,30 +21,44 @@ function App() {
     "Heroes never give up.",
     "I can’t always win, but I never give up."
   ];
+  const handleMouseMovement=(event)=>
+    {
+      const {clientX,clientY}=event;
+      setmousePosition({x:clientX,y:clientY});
+    }
 
 
   useEffect(()=>{
     const timer=setTimeout(()=>
       {
         setIsLoading(false);
-      },10000)
+      },100000)
       const quoteTimer=setInterval(()=>
         {
           const randomQuote=quotes[Math.floor(Math.random()*quotes.length)];
           setQuote(randomQuote);
-        },1500);
+        },1000);
+        window.addEventListener('mousemove',handleMouseMovement)
         return()=>
           {
             clearTimeout(timer);
             clearInterval(quoteTimer);
+            window.removeEventListener('mousemove',handleMouseMovement)
           }
   },[])
-
+  const backgroundPosition=
+  {
+    backgroundPosition:`${mousePosition.x/150}px ${mousePosition.y/100}px`,
+    backgroundImage:`url(${pod})`,
+    backgroundSize:'cover',
+    backgroundRepeat:'no-repeat'
+    
+  }
   return (
     <div className="App">
       {isLoading ? (
         <div className="loader flex flex-col items-center justify-center h-screen w-screen">
-          <div className=" absolute inset-0 bg-[url('./assets/images/bg.jpeg')] bg-cover bg-center filter blur-sm"></div>
+          <div className=" absolute inset-0 bg-cover bg-center filter blur-sm" style={backgroundPosition}></div>
           <div className="relative w-6/12 h-24 space-y-2 flex flex-col items-center justify-center text-green-600 text-4xl text-center mt-4 border border-spacing-5 lg:h:24 lg:w-3/12">
             {quote?quote:"I am Just Being Over Confident."} <br />
             <span className='text-bold font-grobold text-2xl text-ben10'>
