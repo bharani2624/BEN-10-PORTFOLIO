@@ -22,14 +22,14 @@ html {
   padding: 0.3em;
 
   &::-webkit-progress-bar {
-    border-radius: 0.7em; /* Calculate 1.4em/2 */
+    border-radius: 0.7em; 
     background: #1a1a1a;
   }
   
   &::-webkit-progress-value {
-    background: #ffffff;
-    box-shadow: 0 0 0.6em #139402dc, 0 0 0.8em #03fcc2;
-    border-radius: 0.7em; /* Calculate 1.4em/2 */
+    background: #c1ff71;
+    box-shadow: 0 0 0.6em #139402dc, 0 0 0.8em #228104;
+    border-radius: 0.7em; 
   }
 }
 
@@ -38,6 +38,6 @@ html {
   font-size: 1.2em;
   line-height: 1.4em;
   letter-spacing: 1px;
-  text-shadow: 0 0 0.3em #fc0349, 0 0 0.6em #fc0349;
+  text-shadow: 0 0 0.3em #ffffff, 0 0 0.6em #ffffff;
   margin-left: 0.5em;
 }

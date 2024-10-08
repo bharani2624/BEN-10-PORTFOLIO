@@ -32,7 +32,7 @@ function App() {
     const timer=setTimeout(()=>
       {
         setIsLoading(false);
-      },100000)
+      },5000)
       const quoteTimer=setInterval(()=>
         {
           const randomQuote=quotes[Math.floor(Math.random()*quotes.length)];
@@ -43,7 +43,7 @@ function App() {
           {
             clearTimeout(timer);
             clearInterval(quoteTimer);
-            window.removeEventListener('mousemove',handleMouseMovement)
+            window.removeEventListener('mousemove',handleMouseMovement);
           }
   },[])
   const backgroundPosition=
