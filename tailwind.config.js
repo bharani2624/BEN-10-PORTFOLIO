@@ -12,6 +12,10 @@ export default {
         roboto:['Robot','sans-serif'],
         domain:['Domain','serif']
       },
+      colors:
+      {
+        ben10:'#a3e635'
+      },
     },
   },
   plugins: [],

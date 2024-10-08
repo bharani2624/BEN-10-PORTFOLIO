@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Odibee Sans', cursive;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #111;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.bar {
+  -webkit-appearance: none;
+  height: 1.4em;
+  width: 350px;
+  padding: 0.3em;
+
+  &::-webkit-progress-bar {
+    border-radius: 0.7em; /* Calculate 1.4em/2 */
+    background: #1a1a1a;
+  }
+  
+  &::-webkit-progress-value {
+    background: #ffffff;
+    box-shadow: 0 0 0.6em #139402dc, 0 0 0.8em #03fcc2;
+    border-radius: 0.7em; /* Calculate 1.4em/2 */
+  }
+}
+
+.bar__value {
+  color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  letter-spacing: 1px;
+  text-shadow: 0 0 0.3em #fc0349, 0 0 0.6em #fc0349;
+  margin-left: 0.5em;
+}
