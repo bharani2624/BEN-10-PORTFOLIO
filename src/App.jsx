@@ -12,8 +12,7 @@ import pod from './assets/images/bg.jpeg'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [quote, setQuote] = useState('');
-  
-  // Ben 10 quotes
+
   const quotes = [
     "It's Hero Time!",
     "You're never too young to be a hero.",
@@ -22,23 +21,7 @@ function App() {
     "I can’t always win, but I never give up."
   ];
 
-  // useEffect(() => {
-  //   // Set loading time to 10 seconds
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 10000);
 
-  //   // Display a new quote every 3 seconds during loading
-  //   const quoteTimer = setInterval(() => {
-  //     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  //     setQuote(randomQuote);
-  //   }, 1500);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //     clearInterval(quoteTimer); 
-  //   };
-  // }, []);
   useEffect(()=>{
     const timer=setTimeout(()=>
       {
