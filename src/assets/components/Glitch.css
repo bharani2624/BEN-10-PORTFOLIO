@@ -2,9 +2,8 @@
     position: relative;
     display: inline-block;
     font-size: 3rem;
-    color: white;
+    color: rgb(184, 216, 189);
     text-transform: uppercase;
-    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     animation: glitch 1s infinite;
   }
@@ -18,20 +17,20 @@
     width: 100%;
     height: 100%;
     color: white;
-    background: #000;
+    background: #00000000;
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
   }
   
   .glitch::before {
     left: 2px;
-    text-shadow: -2px 0 red;
+    text-shadow:-3px 0 rgb(1, 199, 1);
     animation: glitchTop 1.5s infinite linear alternate-reverse;
   }
   
   .glitch::after {
     left: -2px;
-    text-shadow: -2px 0 blue;
+    text-shadow: -3px 0 blue;
     animation: glitchBottom 1.5s infinite linear alternate-reverse;
   }
   
@@ -121,4 +120,3 @@
       clip: rect(0, 900px, 30px, 0);
     }
   }
-  
