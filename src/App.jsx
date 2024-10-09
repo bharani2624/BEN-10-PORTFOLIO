@@ -8,7 +8,9 @@ import About from './assets/components/About';
 import Content from './assets/components/Content';
 import Footer from './assets/components/Footer';
 import NeonProgressBar from './assets/components/NeonProgressBar/NeonProgressBar';
-import pod from './assets/images/bg.jpeg'
+import pod from './assets/images/bg.jpeg';
+import Starfield from 'react-starfield';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [quote, setQuote] = useState('');
@@ -72,6 +74,12 @@ function App() {
       ) : (
         <Router>
           <div>
+          <Starfield
+        starCount={1500}
+        starColor={[105, 205, 205]}
+        speedFactor={1}
+        backgroundColor="black"
+      />
             <Content />
             <About />
           </div>
