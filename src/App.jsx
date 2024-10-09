@@ -9,7 +9,9 @@ import Content from './assets/components/Content';
 import Footer from './assets/components/Footer';
 import NeonProgressBar from './assets/components/NeonProgressBar/NeonProgressBar';
 import pod from './assets/images/bg.jpeg';
-import Starfield from 'react-starfield';
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +36,7 @@ function App() {
     const timer=setTimeout(()=>
       {
         setIsLoading(false);
-      },15000)
+      },5000)
       const quoteTimer=setInterval(()=>
         {
           const randomQuote=quotes[Math.floor(Math.random()*quotes.length)];
@@ -48,6 +50,16 @@ function App() {
             window.removeEventListener('mousemove',handleMouseMovement);
           }
   },[])
+  
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    await loadSlim(engine);
+}, []);
+
+const particlesLoaded = useCallback(async container => {
+    await console.log(container);
+}, []);
+  
   const backgroundPosition=
   {
     backgroundPosition:`${mousePosition.x/150}px ${mousePosition.y/100}px`,
@@ -74,13 +86,146 @@ function App() {
       ) : (
         <Router>
           <div>
-          <Starfield
-        starCount={1500}
-        starColor={[105, 205, 205]}
-        speedFactor={1}
-        backgroundColor="black"
-      />
-            <Content />
+
+            <div>
+            <Particles className=""
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={{
+                background: {
+                    color: {
+                        value: "#0000",
+                    },
+                },
+                fpsLimit: 120,
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        onHover: {
+                            enable: true,
+                            mode:"repulse",
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        push: {
+                            quantity: 5,
+                        },
+                        repulse: {
+                            distance: 500,
+                            duration: 0.5,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#ffffff",
+                    },
+                    links: {
+                        color: "#3857",
+                        distance: 500,
+                        enable: true,
+                        opacity: 0.5,
+                        width: 0.5,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 10,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 900,
+                        },
+                        value: 50,
+                    },
+                    opacity: {
+                        value: 0.5,
+                    },
+                    shape: {
+                        type: "square",
+                    },
+                    size: {
+                        value: { min: 0, max: 2 },
+                    },
+                },
+                detectRetina: true,
+                emitters: [
+                  {
+                    direction: "top",
+                    position: {
+                      x: 50,
+                      y: 0,
+                    },
+                    rate: {
+                      quantity: 50,
+                      delay: 0.1,
+                    },
+                    size: {
+                      width: 100,
+                      height: 0,
+                    },
+                  },
+                  {
+                    direction: "bottom",
+                    position: {
+                      x: 50,
+                      y: 100,
+                    },
+                    rate: {
+                      quantity: 10,
+                      delay: 0.1,
+                    },
+                    size: {
+                      width: 100,
+                      height: 0,
+                    },
+                  },
+                  {
+                    direction: "left",
+                    position: {
+                      x: 0,
+                      y: 50,
+                    },
+                    rate: {
+                      quantity: 10,
+                      delay: 0.1,
+                    },
+                    size: {
+                      width: 0,
+                      height: 100,
+                    },
+                  },
+                  {
+                    direction: "right",
+                    position: {
+                      x: 100,
+                      y: 50,
+                    },
+                    rate: {
+                      quantity: 10,
+                      delay: 0.1,
+                    },
+                    size: {
+                      width: 0,
+                      height: 100,
+                    },
+                  },
+                ],
+            }}
+        />
+              <Content />
+            </div>
             <About />
           </div>
           <Routes>

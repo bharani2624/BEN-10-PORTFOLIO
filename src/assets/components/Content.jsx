@@ -22,7 +22,7 @@ const Content = () => {
         return ()=>{clearInterval(interval);}
             },[])
     return (
-        <div className="relative flex flex-col lg:flex-row px-4 lg:px-8 py-8 lg:space-x-10 lg:space-y-0  h-screen justify-center items-center">
+        <div className="relative flex flex-col lg:flex-row px-4 lg:px-8 py-8 lg:space-x-10 lg:space-y-0  h-screen justify-center items-center filter">
             <div className="text-teal-50 text-5xl w-full h-40">
                  Hi I 'M <h1 className="text-ben10 inline">
                 A<span className="text-ben10">B</span><span className="text-ben10">D</span>
