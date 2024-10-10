@@ -8,6 +8,7 @@ import About from './assets/components/About';
 import Content from './assets/components/Content';
 import Footer from './assets/components/Footer';
 import NeonProgressBar from './assets/components/NeonProgressBar/NeonProgressBar';
+import BallMenu from './assets/components/BallMenu';
 import pod from './assets/images/bg.jpeg';
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
@@ -113,7 +114,7 @@ const particlesLoaded = useCallback(async container => {
                     },
                     modes: {
                         push: {
-                            quantity: 5,
+                            quantity: 1,
                         },
                         repulse: {
                             distance: 500,
@@ -156,7 +157,7 @@ const particlesLoaded = useCallback(async container => {
                         type: "square",
                     },
                     size: {
-                        value: { min: 0, max: 2 },
+                        value: { min: 0, max: 1 },
                     },
                 },
                 detectRetina: true,
@@ -226,6 +227,7 @@ const particlesLoaded = useCallback(async container => {
         />
               <Content />
             </div>
+            <BallMenu/> 
             <About />
           </div>
           <Routes>

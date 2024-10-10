@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../components/Content.css';
 import './Glitch.css';
-import linkedIn from '../images/linkedin.png';
-import cv from '../images/cv.png'
-import github from '../images/github.png'
 import { PiLinkedinLogoBold } from "react-icons/pi";
 import { LiaGithubSquare } from "react-icons/lia";
 import { AiFillFile } from "react-icons/ai";
@@ -51,7 +48,7 @@ const Content = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col lg:flex-row px-4 lg:px-8 py-8 w-screen h-screen items-center text-center justify-center">
+    <div className="relative flex flex-col lg:flex-row px-4 lg:px-8 py-8 items-center text-center justify-center">
       {show&& <div className="fixed inline top-10 bg-green-500/50 w-40 text-white/40 py-2 text-center  border rounded-3xl items-center justify-center text-white">
           Succesfully Copied The Email
         </div>
