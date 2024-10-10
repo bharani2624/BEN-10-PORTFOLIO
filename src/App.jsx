@@ -183,7 +183,7 @@ const particlesLoaded = useCallback(async container => {
                       y: 100,
                     },
                     rate: {
-                      quantity: 10,
+                      quantity: 0,
                       delay: 0.1,
                     },
                     size: {
@@ -194,7 +194,7 @@ const particlesLoaded = useCallback(async container => {
                   {
                     direction: "left",
                     position: {
-                      x: 0,
+                      x: 50,
                       y: 50,
                     },
                     rate: {
@@ -213,7 +213,7 @@ const particlesLoaded = useCallback(async container => {
                       y: 50,
                     },
                     rate: {
-                      quantity: 0,
+                      quantity: 100,
                       delay: 0.1,
                     },
                     size: {
