@@ -8,11 +8,11 @@ import About from './assets/components/About';
 import Content from './assets/components/Content';
 import Footer from './assets/components/Footer';
 import NeonProgressBar from './assets/components/NeonProgressBar/NeonProgressBar';
-import BallMenu from './assets/components/BallMenu';
 import pod from './assets/images/bg.jpeg';
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import CircularMenu from './assets/components/CircularMenu/CircularMenu';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -94,72 +94,72 @@ const particlesLoaded = useCallback(async container => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                background: {
+              background: {
                     color: {
                         value: "#0000",
                     },
-                },
-                fpsLimit: 120,
-                interactivity: {
+                  },
+                  fpsLimit: 120,
+                  interactivity: {
                     events: {
-                        onClick: {
-                            enable: true,
+                      onClick: {
+                        enable: false,
                             mode: "push",
-                        },
-                        onHover: {
+                          },
+                          onHover: {
                             enable: true,
                             mode:"repulse",
-                        },
+                          },
                         resize: true,
                     },
                     modes: {
-                        push: {
-                            quantity: 1,
-                        },
+                      push: {
+                        quantity: 0,
+                      },
                         repulse: {
                             distance: 500,
                             duration: 0.5,
+                          },
                         },
-                    },
-                },
+                      },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                      value: "#ffffff",
                     },
                     links: {
-                        color: "#3857",
+                      color: "#3857",
                         distance: 500,
                         enable: true,
                         opacity: 0.5,
                         width: 0.5,
-                    },
-                    move: {
+                      },
+                      move: {
                         direction: "none",
                         enable: true,
                         outModes: {
-                            default: "bounce",
+                          default: "bounce",
                         },
                         random: false,
                         speed: 10,
                         straight: false,
-                    },
-                    number: {
+                      },
+                      number: {
                         density: {
-                            enable: true,
-                            area: 900,
+                          enable: true,
+                          area: 900,
                         },
                         value: 50,
-                    },
+                      },
                     opacity: {
                         value: 0.5,
-                    },
-                    shape: {
+                      },
+                      shape: {
                         type: "square",
-                    },
-                    size: {
+                      },
+                      size: {
                         value: { min: 0, max: 1 },
+                      },
                     },
-                },
                 detectRetina: true,
                 emitters: [
                   {
@@ -169,7 +169,7 @@ const particlesLoaded = useCallback(async container => {
                       y: 0,
                     },
                     rate: {
-                      quantity: 0,
+                      quantity: 10,
                       delay: 0.1,
                     },
                     size: {
@@ -224,10 +224,11 @@ const particlesLoaded = useCallback(async container => {
                   },
                 ],
             }}
-        />
+            />
               <Content />
+            <CircularMenu/>
             </div>
-            <BallMenu/> 
+             
             <About />
           </div>
           <Routes>
