@@ -48,7 +48,7 @@ const Content = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col lg:flex-row px-4 lg:px-8 py-8 items-center text-center justify-center">
+    <div className="relative flex flex-col lg:flex-row px-4 lg:px-8 py-8 items-center text-center justify-center w-screen h-screen">
       {show&& <div className="fixed inline top-10 bg-green-500/50 w-40 text-white/40 py-2 text-center  border rounded-3xl items-center justify-center text-white">
           Succesfully Copied The Email
         </div>

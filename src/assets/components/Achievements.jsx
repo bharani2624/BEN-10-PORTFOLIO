@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const Achievements=()=>
     {
         return(
-            <div>
+            <div className="relative w-screen h-screen bg-white ">
                 
             </div>
         )

@@ -68,12 +68,17 @@ input:checked ~ #show-menu .btn:nth-child(5) {
  }
  .closebtn
  {
-    transform: translateY(20px);
+    transform: translateY(0px);
     opacity: 0;
  }
 
  input:checked~#show-menu .btn .menubtn
  {
-    transform: translateY(-50px);
+    transform: rotate(0.5turn);
     opacity: 0;
  }
+input:checked~#show-menu .closebtn
+{
+    transform: rotate(0.25turn);
+    opacity: 1;
+}

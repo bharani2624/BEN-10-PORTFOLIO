@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import '../src/animations/animate.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './assets/components/Header';
 import Achievements from './assets/components/Achievements';
 import About from './assets/components/About';
 import Content from './assets/components/Content';
@@ -86,8 +85,6 @@ const particlesLoaded = useCallback(async container => {
         </div>
       ) : (
         <Router>
-          <div>
-
             <div>
             <Particles className=""
             id="tsparticles"
@@ -95,62 +92,62 @@ const particlesLoaded = useCallback(async container => {
             loaded={particlesLoaded}
             options={{
               background: {
-                    color: {
-                        value: "#0000",
-                    },
+                color: {
+                  value: "#0000",
+                },
+              },
+              fpsLimit: 120,
+              interactivity: {
+                events: {
+                  onClick: {
+                    enable: false,
+                    mode: "push",
                   },
-                  fpsLimit: 120,
-                  interactivity: {
-                    events: {
-                      onClick: {
-                        enable: false,
-                            mode: "push",
-                          },
-                          onHover: {
-                            enable: true,
-                            mode:"repulse",
-                          },
-                        resize: true,
-                    },
-                    modes: {
-                      push: {
-                        quantity: 0,
-                      },
-                        repulse: {
+                  onHover: {
+                    enable: true,
+                    mode:"repulse",
+                  },
+                  resize: true,
+                },
+                modes: {
+                  push: {
+                    quantity: 0,
+                  },
+                  repulse: {
                             distance: 500,
                             duration: 0.5,
                           },
                         },
                       },
-                particles: {
-                    color: {
-                      value: "#ffffff",
-                    },
-                    links: {
-                      color: "#3857",
-                        distance: 500,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 0.5,
-                      },
-                      move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                          default: "bounce",
+                      particles: {
+                        color: {
+                          value: "#ffffff",
                         },
-                        random: false,
-                        speed: 10,
-                        straight: false,
-                      },
-                      number: {
-                        density: {
+                        links: {
+                          color: "#3857",
+                          distance: 500,
                           enable: true,
-                          area: 900,
+                          opacity: 0.5,
+                          width: 0.5,
                         },
-                        value: 50,
-                      },
-                    opacity: {
+                        move: {
+                          direction: "none",
+                          enable: true,
+                          outModes: {
+                            default: "bounce",
+                          },
+                          random: false,
+                          speed: 10,
+                          straight: false,
+                        },
+                        number: {
+                          density: {
+                            enable: true,
+                            area: 900,
+                          },
+                          value: 50,
+                        },
+                        opacity: {
                         value: 0.5,
                       },
                       shape: {
@@ -223,16 +220,15 @@ const particlesLoaded = useCallback(async container => {
                     },
                   },
                 ],
-            }}
-            />
-              <Content />
-            <CircularMenu/>
-            </div>
-             
+              }}
+              />
+            <Content />
             <About />
+            <Achievements/>
+            <Footer/>
+          <CircularMenu/>
           </div>
           <Routes>
-            <Route path="/Header" element={<Header />} />
             <Route path="/Achievements" element={<Achievements />} />
             <Route path="/Content" element={<Content />} />
             <Route path="/Footer" element={<Footer />} />
