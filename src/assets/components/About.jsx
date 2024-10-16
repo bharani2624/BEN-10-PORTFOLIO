@@ -3,7 +3,6 @@ import frontend from '../images/react.png';
 import backend from '../images/java.png';
 import ai from '../images/ai.png';
 import linux from '../images/linux.png'
-import { IconBase } from "react-icons";
 
 
 const skills = [

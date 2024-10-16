@@ -75,7 +75,7 @@ const particlesLoaded = useCallback(async container => {
       {isLoading ? (
         <div className="loader flex flex-col items-center justify-center w-screen">
           <div className=" absolute inset-0 bg-cover bg-center filter blur-md" style={backgroundPosition}></div>
-          <div className="relative w-9/12 h-28 md:w-6/12 md:h-24 lg:w-6/12 space-y-2 flex flex-col items-center justify-center text-green-600 text-4xl text-center mt-4 border border-spacing-5 lg:h:24 ">
+          <div className="relative w-9/12 h-28 md:w-6/12 md:h-24 lg:w-6/12 space-y-2 flex flex-col items-center justify-center text-green-600 text-4xl text-center mt-4 border-spacing-5 lg:h:24 ">
             {quote?quote:"I am Just Being Over Confident."} <br />
             <span className='text-bold font-grobold text-2xl text-ben10'>
               -BEN<span className='text-white border-black border-opacity-25 font-grobold'>10</span>
