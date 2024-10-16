@@ -19,6 +19,7 @@
     "react-router-dom": "^6.26.2",
     "react-star-sky": "^1.0.3",
     "react-starfield": "^1.0.3",
+    "react-tagcloud": "^2.3.3",
     "react-tsparticles": "^2.12.2",
     "react-typed": "^2.0.12",
     "router": "^1.3.8",

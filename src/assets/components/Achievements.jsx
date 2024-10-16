@@ -32,11 +32,11 @@ const internships = [
 
 const Achievements = () => {
   return (
-    <div className="relative w-screen h-screen bg-transparent backdrop-blur-sm">
+    <div className="relative w-screen bg-transparent backdrop-blur-sm">
       <div className="container mx-auto p-8">
         <section className="mb-16">
-          <h2 className="text-4xl xl:text-6xl lg:text-6xl sm:text-6xl  font-bold text-green-600 mb-8">Achievements</h2>
-          <div className="group/item grid grid-cols-2 md:grid-cols-2 gap-8 ">
+          <h2 className="text-4xl xl:text-6xl lg:text-6xl md:text-6xl  font-bold text-green-600 mb-8">Achievements</h2>
+          <div className="group/item grid grid-cols-1 md:grid-cols-2  xl:grid-cols-2 lg:grid-cols-2 gap-8 ">
             {achievements.map((achievement, index) => (
               <div key={index} className="p-6 border-2 border-green-500/10  hover:bg-green-100/50 hover:transition-opacity hover:opa rounded-lg shadow-lg bg-white/10 ">
                 <h3 className="text-2xl font-bold text-white mb-2">{achievement.title}</h3>
