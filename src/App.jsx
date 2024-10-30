@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Achievements from './assets/components/Achievements';
 import About from './assets/components/About';
 import Content from './assets/components/Content';
+import Skills from './assets/components/Skills';
+import Projects from './assets/components/Projects';
 import Footer from './assets/components/Footer';
 import NeonProgressBar from './assets/components/NeonProgressBar/NeonProgressBar';
-import Skills from './assets/components/Skills';
-import TagCloud from './assets/components/Cloud/TagCloud';
 import pod from './assets/images/bg.jpeg';
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
@@ -228,6 +228,7 @@ const particlesLoaded = useCallback(async container => {
             <About />
             <Achievements/>
             <Skills/>
+            <Projects/>
             <Footer/>
           <CircularMenu/>
           </div>

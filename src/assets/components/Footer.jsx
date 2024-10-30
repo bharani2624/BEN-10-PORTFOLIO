@@ -25,7 +25,10 @@ const Footer = () => {
                             placeholder="Query"
                         />
 
-                    <div className="btn bg-white flex"><button className=" bg-white w-6/12">asdfsaj</button></div>
+                    <div className="bg w-full flex justify-center items-center">
+                        
+                        <button className="bg-white transition-colors duration-200 ease-in-out hover:bg-white/20 w-2/12 lg:w-24  border rounded-sm">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
