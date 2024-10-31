@@ -8,8 +8,8 @@
     overflow: hidden;
     cursor: pointer;
     background-color: rgba(0, 128, 28, 0.267);
-    bottom: 70px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,31 +35,32 @@ input:checked ~ #show-menu .btn:nth-child(2) {
 }
 
 input:checked ~ #show-menu .btn:nth-child(3) {
-    bottom: 150px;
+    bottom: 170px;
     right: 80px;
     opacity: 1;
     z-index: 2;
 }
 
 input:checked ~ #show-menu .btn:nth-child(4) {
-    bottom: 95px;
-    right: 110px;
+    bottom: 120px;
+    right: 130px;
     opacity: 1;
     z-index: 2;
 }
 
 input:checked ~ #show-menu .btn:nth-child(5) {
-    bottom: 30px;
-    right: 120px;
+    bottom: 60px;
+    right: 160px;
     opacity: 1;
     z-index: 2;
 }
-/* input:checked ~ #show-menu .btn:nth-child(6) {
+input:checked ~ #show-menu .btn:nth-child(6) {
     bottom: 0px;
-    right: 120px;
+    right: 170px;
     opacity: 1;
     z-index: 2;
-} */
+}
+
  .menubtn,
  .closebtn
  {
