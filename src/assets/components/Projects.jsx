@@ -18,7 +18,7 @@ const Projects = () => {
     };
 
     return (
-        <div className="relative w-screen h-screen flex p-5">
+        <div className="relative w-screen h-screen flex p-5" id="projects">
             <Slider {...settings} className="w-full">
                 {[...Array(6)].map((_, index) => (
                     <div key={index}>

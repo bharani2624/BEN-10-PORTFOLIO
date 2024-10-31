@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="relative  backdrop-blur-sm  w-12/12 md:w-full lg:w-10/12 md:p-20 lg:ml-auto lg:mr-auto p-10  ml-0 lg:flex-row justify-center items-center">
+        <footer className="relative  backdrop-blur-sm  w-12/12 md:w-full lg:w-10/12 md:p-20 lg:ml-auto lg:mr-auto p-10  ml-0 lg:flex-row justify-center items-center" id="contacts">
             <div className="contact bg-green-500/20 h-72 border p-5">
                 <h1 className="text-green-600 text-4xl flex">
                     Contact

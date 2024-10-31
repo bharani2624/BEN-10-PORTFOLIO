@@ -32,7 +32,7 @@ const internships = [
 
 const Achievements = () => {
   return (
-    <div className="relative w-screen bg-transparent backdrop-blur-sm">
+    <div className="relative w-screen bg-transparent backdrop-blur-sm" id="achievements">
       <div className="container mx-auto p-8">
         <section className="mb-16">
           <h2 className="text-4xl xl:text-6xl lg:text-6xl md:text-6xl  font-bold text-green-600 mb-8">Achievements</h2>

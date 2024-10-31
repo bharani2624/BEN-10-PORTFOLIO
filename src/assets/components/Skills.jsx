@@ -18,9 +18,9 @@ import react from '../images/react.png'
 import tailwind from '../images/tailwind.png'
 const Skills = () => {
   return (
-    <div className="relative skills-container h-screen flex justify-center items-center p-2 md:p-24 lg:p-48 rounded-lg shadow-lg text-black bg-transparent backdrop-blur-[2px]">
+    <div className="relative skills-container h-screen flex justify-center items-center p-2 xl:p-44 lg:px-2 lg:py-10 md:px-10 backdrop-blur-sm bg-transparent rounded-lg shadow-lg text-black" id="skills">
       <div className="skills w-full space-y-10 p-5 bg-transparent backdrop-blur-lg">
-        <h1 className='text-green-600 text-4xl md:text-6xl lg:text-6xl'>Skills</h1>
+        <h1 className='text-green-600 text-4xl md:text-5xl lg:text-5xl'>Skills</h1>
         <div className="programmingLaguages">
           <h1 className="text-2xl text-white">Programming</h1>
           <div className='flex space-x-2'>
@@ -53,9 +53,7 @@ const Skills = () => {
             <img src={androidstudio} className='w-2/12  rounded-full outline-none backdrop-blur-lg md:w-20' alt="" />
           </div>
         </div>
-        {/* <div className="programmingLaguages">
-          <h1 className="text-3xl text-white">UI</h1>
-        </div> */}
+      
         <div className="programmingLaguages">
           <h1 className="text-3xl text-white">Web Development</h1>
           <div className='flex space-x-2'>
