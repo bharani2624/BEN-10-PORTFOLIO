@@ -21,7 +21,7 @@ const CircularMenu = () => {
 
 
     return (
-        <div className="flex items-center justify-center" onClick={playSound}>
+        <div className="flex items-center justify-center overflow-x-hidden" onClick={playSound}>
             <div className="menu fixed bg-green-600 bottom-5 right-5">
                 <input 
                     type="checkbox" 

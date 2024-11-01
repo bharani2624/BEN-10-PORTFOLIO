@@ -14,8 +14,8 @@ const skills = [
 
 const About = () => {
   return (
-    <div className="relative ml-0 md:ml-0 xl:ml-0 lg:ml-0 w-scr h-screen md:px-10 lg:px-2 xl:px-44 flex backdrop-blur-sm bg-transparent text-green-500 mt-10 justify-center items-center">
-      <div className="flex flex-col lg:flex-row xl:h-96 w-full">
+    <div className="relative ml-0 md:ml-0 xl:ml-0 lg:ml-0 h-screen md:px-10 lg:p-5 xl:px-44 flex backdrop-blur-sm bg-transparent text-green-500 mt-10 justify-center items-center overflow-x-hidden">
+      <div className="flex flex-col lg:flex-row xl:h-96 ">
 
         <div className="flex flex-col lg:w-8/12 p-0 md:p-10">
           <div className="about text-5xl ml-10 md:text-6xl lg:text-7xl absolute top-21">

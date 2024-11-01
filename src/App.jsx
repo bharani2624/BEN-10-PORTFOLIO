@@ -232,10 +232,10 @@ function App() {
             </ul>
           </nav>
           <Element name="Content" className="element">
-            {/* <Content /> */}
+            <Content />
           </Element>
           <Element name="About" className="element">
-            {/* <About /> */}
+            <About />
           </Element>
           <Element name="Achievements" className="element">
             <Achievements />
@@ -247,7 +247,7 @@ function App() {
             <Projects />
           </Element>
           <Element name="Footer" className="element">
-            <Footer />
+            {/* <Footer /> */}
           </Element>
           <CircularMenu />
         </div>
