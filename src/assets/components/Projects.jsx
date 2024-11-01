@@ -8,17 +8,17 @@ const Projects = () => {
     // Slider settings
     const settings = {
         dots: true, // Enable dots navigation
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows: false // Disable arrows if you only want dots for navigation
+        arrows: true // Disable arrows if you only want dots for navigation
     };
 
     return (
-        <div className="relative w-screen h-screen flex p-5" id="projects">
+        <div className="relative w-screen flex p-10" id="projects">
             <Slider {...settings} className="w-full">
                 {[...Array(6)].map((_, index) => (
                     <div key={index}>

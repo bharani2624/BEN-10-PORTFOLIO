@@ -71,7 +71,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
       {isLoading ? (
-        <div className="loader flex flex-col items-center justify-center w-screen">
+        <div className="loader flex flex-col items-center justify-center ">
           <div className="absolute inset-0 bg-cover bg-center filter blur-md" style={backgroundPosition}></div>
           <div className="relative w-9/12 h-28 md:w-6/12 md:h-24 lg:w-6/12 space-y-2 flex flex-col items-center justify-center text-green-600 text-4xl text-center mt-4 border-spacing-5 lg:h:24 ">
             {quote ? quote : "I am Just Being Over Confident."} <br />
@@ -232,10 +232,10 @@ function App() {
             </ul>
           </nav>
           <Element name="Content" className="element">
-            <Content />
+            {/* <Content /> */}
           </Element>
           <Element name="About" className="element">
-            <About />
+            {/* <About /> */}
           </Element>
           <Element name="Achievements" className="element">
             <Achievements />
@@ -244,7 +244,7 @@ function App() {
             <Skills />
           </Element>
           <Element name="Projects" className="element">
-            {/* <Projects /> */}
+            <Projects />
           </Element>
           <Element name="Footer" className="element">
             <Footer />
