@@ -244,7 +244,7 @@ function App() {
             <Skills />
           </Element>
           <Element name="Projects" className="element">
-            <Projects />
+            {/* <Projects /> */}
           </Element>
           <Element name="Footer" className="element">
             {/* <Footer /> */}
