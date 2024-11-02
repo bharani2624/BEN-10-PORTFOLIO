@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../components/Content.css';
 import './Glitch.css';
+
 import { PiLinkedinLogoBold } from "react-icons/pi";
 import { LiaGithubSquare } from "react-icons/lia";
 import { AiFillFile } from "react-icons/ai";
@@ -23,6 +24,14 @@ const Content = () => {
     link.click();
     document.body.removeChild(link);
   };
+  const linkedIn=()=>
+    {
+      window.location.href = 'https://www.linkedin.com/in/bharanidharaun-a-443b4a256/';
+    }
+    const gitHub=()=>
+      {
+        window.location.href = 'https://github.com/bharani2624';
+      }
 
   const [show, setShow] = useState(false);
 
@@ -61,8 +70,8 @@ const Content = () => {
         </div>
         <div className="social-icons mt-10 flex items-center justify-center space-x-3">
           <div className="glasscontainer flex space-x-3 w-40 h-16 items-center justify-center rounded-xl backdrop-blur-lg bg-green-600/20 border border-white/30 shadow-xl">
-            <PiLinkedinLogoBold className="cursor-pointer hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" />
-            <LiaGithubSquare className="cursor-pointer hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" />
+            <PiLinkedinLogoBold className="cursor-pointer hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" onClick={linkedIn}/>
+            <LiaGithubSquare className="cursor-pointer hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" onClick={gitHub} />
             <AiFillFile onClick={downloadFile} className="cursor-pointer w-10 h-10 hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" />
             <AiOutlineGoogle onClick={textCopy} className="cursor-pointer hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" />
           </div>
