@@ -18,7 +18,7 @@ const phrases = [
 const Content = () => {
   const downloadFile = () => {
     const link = document.createElement('a');
-    link.href = 'ben10-portfolio/src/assets/images/resume.pdf';
+    link.href = 'ben10-portfolio/src/assets/images/BHARANIDHARAUN A-RESUME.pdf';
     link.download = 'ABD-RESUME.pdf';
     document.body.appendChild(link);
     link.click();
@@ -69,7 +69,7 @@ const Content = () => {
           <span className="glitch" data-text={phrases[currentPhrase]}>{phrases[currentPhrase]}</span>
         </div>
         <div className="social-icons mt-10 flex items-center justify-center space-x-3">
-          <div className="glasscontainer flex space-x-3 w-40 h-16 items-center justify-center rounded-xl backdrop-blur-lg bg-green-600/20 border border-white/30 shadow-xl">
+          <div className="glasscontainer flex space-x-3 w-40 h-16 items-center justify-center rounded-xl backdrop-blur-lg bg-green-600/20 border border-white/30 shadow-2xl">
             <PiLinkedinLogoBold className="cursor-pointer hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" onClick={linkedIn}/>
             <LiaGithubSquare className="cursor-pointer hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" onClick={gitHub} />
             <AiFillFile onClick={downloadFile} className="cursor-pointer w-10 h-10 hover:text-ben10 transition-all duration-500 ease-in-out hover:h-24 hover:w-24" />
