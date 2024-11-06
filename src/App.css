@@ -3,14 +3,8 @@
 @tailwind utilities;
 @font-face {
   font-family: 'GROBOLD';
-  src: url("ben10-portfolio/src/font/GROBOLD.ttf")format('truetype');
+  src: url("./font/GROBOLD.ttf")format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-/* .loader{
-  background-image: url('./assets/images/bg.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(10px);
-} */
+
