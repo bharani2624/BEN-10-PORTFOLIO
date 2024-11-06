@@ -18,8 +18,8 @@ const phrases = [
 const Content = () => {
   const downloadFile = () => {
     const link = document.createElement('a');
-    link.href = 'ben10-portfolio/src/assets/images/BHARANIDHARAUN A-RESUME.pdf';
-    link.download = 'ABD-RESUME.pdf';
+    link.href = '';
+    link.download = 'BHARANI DHARAUN A.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -54,7 +54,7 @@ const Content = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-x-hidden flex flex-col lg:flex-row px-4 lg:px-8 py-8 items-center text-center justify-center" id="home">
+    <div className="relative h-screen overflow-x-hidden flex flex-col lg:flex-row px-4 lg:px-8 py-8 items-center text-center justify-center" id="home">
       {show && (
         <div className="fixed top-10 bg-green-500/50 w-40 text-white/40 py-2 text-center border rounded-3xl">
           Successfully Copied The Email

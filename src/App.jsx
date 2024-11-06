@@ -84,7 +84,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <div>
+        <div className=''>
           <Particles className=""
             id="tsparticles"
             init={particlesInit}
