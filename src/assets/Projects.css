@@ -1,0 +1,11 @@
+/* Ensure Swiper container and slides are fully responsive */
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}

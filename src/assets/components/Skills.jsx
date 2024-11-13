@@ -18,7 +18,7 @@ import react from '../images/react.png'
 import tailwind from '../images/tailwind.png'
 const Skills = () => {
   return (
-    <div className="relative mt-10 skills-container h-screen flex justify-center items-center p-2 lg:px-20 backdrop-blur-sm bg-transparent rounded-lg shadow-lg text-black" id="skills">
+    <div className="relative mt-10 skills-container h-screen flex justify-center items-center p-2 lg:px-44 md:px-16 backdrop-blur-sm bg-transparent rounded-lg shadow-lg text-black" id="skills">
       <div className="skills w-full space-y-10 p-5 bg-transparent backdrop-blur-lg">
         <h1 className='text-green-600 text-4xl md:text-5xl lg:text-5xl'>Skills</h1>
         <div className="programmingLaguages">
