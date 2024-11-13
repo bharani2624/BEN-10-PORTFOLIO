@@ -68,7 +68,7 @@ const ProjectCarousel = () => {
     };
 
     return (
-        <div className="relative overflow-x-hidden mt-10 bg-transparent backdrop-blur-sm lg:px-24 py-10">
+        <div className="relative mt-10 bg-transparent backdrop-blur-sm lg:px-24 py-10">
             <div className="px-10 lg:px-24 md:px-24">
                 <h2 className="text-4xl xl:text-6xl lg:text-6xl md:text-6xl font-bold text-green-600 mb-8">Projects</h2>
                 <div className="w-[80vw] flex">
@@ -77,8 +77,8 @@ const ProjectCarousel = () => {
                             <div key={key} className="border-none flex flex-col  p-5 bg-green-500/20 border rounded-lg backdrop-blur-xl">
                                 <h1 className="font-semibold text-white h-20">{data.title}</h1>
                                 <p className="text-lg text-green-500 text-left py-10">{data.description}</p>
-                                <p className="text-lg ml-0 absolute mt-56 italic">{data.technology}</p>
-                                <a href={data.link} target="_blank" rel="noopener noreferrer" className="text-green-500 underline">
+                                <p className="text-lg ml-0 absolute mt-64 lg:mt-52 italic">{data.technology}</p>
+                                <a href={data.link} target="_blank" rel="noopener noreferrer" className="text-green-500 absolute mt-72 lg:mt-60 underline">
                                     Github
                                 </a>
                             </div>
