@@ -50,7 +50,7 @@ const ProjectCarousel = () => {
         },
         spaceBetween: 0,
         slidesPerView: 1,
-        loop: true,
+        loop: false,
         breakpoints: {
             640: {
                 slidesPerView: 1,
@@ -68,17 +68,17 @@ const ProjectCarousel = () => {
     };
 
     return (
-        <div className="relative mt-10 bg-transparent backdrop-blur-sm lg:px-24 py-10">
-            <div className="px-10 lg:px-24 md:px-24">
+        <div className="relative mt-10 bg-transparent backdrop-blur-sm lg:px-24 py-10 w-[95vw] md:w-screen">
+            <div className="px-10 lg:px-24 md:px-24 overflow-hidden project-carousel-container"> {/* Add class here */}
                 <h2 className="text-4xl xl:text-6xl lg:text-6xl md:text-6xl font-bold text-green-600 mb-8">Projects</h2>
-                <div className="w-[80vw] flex">
+                <div className="w-[80vw] md:w-full flex lg:ml-2 md:ml-2">
                     <Swiper {...params}>
                         {projectData.map((data, key) => (
-                            <div key={key} className="border-none flex flex-col  p-5 bg-green-500/20 border rounded-lg backdrop-blur-xl">
-                                <h1 className="font-semibold text-white h-20">{data.title}</h1>
+                            <div key={key} className="border-none flex flex-col overflow-x-hidden overflow-y-hidden p-5 bg-green-500/20 border rounded-lg backdrop-blur-xl" >
+                                <h1 className="font-semibold text-white h-28 md:h-24 lg:h-24">{data.title}</h1>
                                 <p className="text-lg text-green-500 text-left py-10">{data.description}</p>
-                                <p className="text-lg ml-0 absolute mt-64 lg:mt-52 italic">{data.technology}</p>
-                                <a href={data.link} target="_blank" rel="noopener noreferrer" className="text-green-500 absolute mt-72 lg:mt-60 underline">
+                                <p className="text-lg ml-0 absolute mt-64 md:mt-[270px] lg:mt-52 italic">{data.technology}</p>
+                                <a href={data.link} target="_blank" rel="noopener noreferrer" className="text-green-500 absolute mt-72 md:mt-[300px] lg:mt-60 underline">
                                     Github
                                 </a>
                             </div>

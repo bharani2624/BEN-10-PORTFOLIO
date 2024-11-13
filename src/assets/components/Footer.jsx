@@ -20,14 +20,27 @@ const Footer = () => {
         emailjs.send('service_bgdmuis', 'template_tqtd68d', emailContent, 'J3H48Pks3D4j7kO-b')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
+                success();
+                setFormData({ name: "", email: "", query: "" });
             }, (error) => {
                 console.log('FAILED...', error);
             });
     };
-    
+    const [show,setshow]=useState(false);
+
+    const success=()=>
+        {
+            setshow(true);
+            setTimeout(()=>{setshow(false)},2000);
+        }
 
     return (
-        <footer className="relative backdrop-blur-sm flex items-center justify-center xl: p-10">
+        <footer className="relative backdrop-blur-sm flex items-center justify-center xl: p-10" id="contacts">
+             {show && (
+        <div className="absolute top-[90px] border-none w-40 text-white py-2 text-center border rounded-3xl">
+          Successfully Submitted
+        </div>
+      )}
             <div className="contact bg-green-500/20 h-72 w-full lg:w-8/12 md:w-9/12 border p-5">
                 <h1 className="text-green-600 text-4xl">Contact</h1>
                 <form className="forms mt-5 space-y-5" onSubmit={handleSubmit}>

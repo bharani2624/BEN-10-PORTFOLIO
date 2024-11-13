@@ -53,6 +53,8 @@ const Content = () => {
     return () => { clearInterval(interval); };
   }, []);
 
+
+
   return (
     <div className="relative h-screen overflow-x-hidden flex flex-col lg:flex-row px-4 lg:px-8 py-8 items-center text-center justify-center" id="home">
       {show && (
