@@ -68,7 +68,7 @@ const ProjectCarousel = () => {
     };
 
     return (
-        <div className="relative mt-10 bg-transparent backdrop-blur-sm lg:px-24 py-10 w-[95vw] md:w-screen">
+        <div className="relative mt-10 bg-transparent backdrop-blur-sm lg:px-24 py-10 w-[95vw] md:w-screen" id="projects">
             <div className="px-10 lg:px-24 md:px-24 overflow-hidden project-carousel-container"> {/* Add class here */}
                 <h2 className="text-4xl xl:text-6xl lg:text-6xl md:text-6xl font-bold text-green-600 mb-8">Projects</h2>
                 <div className="w-[80vw] md:w-full flex lg:ml-2 md:ml-2">
