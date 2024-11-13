@@ -18,7 +18,7 @@ const phrases = [
 const Content = () => {
   const downloadFile = () => {
     const link = document.createElement('a');
-    link.href = '';
+    link.href = "/assets/abdresume.pdf";
     link.download = 'BHARANI DHARAUN A.pdf';
     document.body.appendChild(link);
     link.click();
