@@ -18,8 +18,8 @@ const phrases = [
 const Content = () => {
   const downloadFile = () => {
     const link = document.createElement('a');
-    link.href = "/assets/abdresume.pdf";
-    link.download = 'BHARANI DHARAUN A.pdf';
+    link.href = '/BHARANIDHARAUN-A-RESUME.pdf';
+    link.download = 'BHARANIDHARAUNA.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
