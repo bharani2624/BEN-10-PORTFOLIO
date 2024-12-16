@@ -39,7 +39,14 @@ const ProjectCarousel = () => {
             description: "The Hostel Room Booking System is a Java application designed to manage hostel accommodations, enabling user authentication, room management, and booking functionalities.",
             technology: "AndroidStudio, Java",
             link: "https://github.com/bharani2624/HostelRoomBookingSystem"
+        },
+        {
+            title:"File Manager",
+            description:"CLI based File Manager for linux based distros",
+            technology:"Shell Script(Bash)",
+            link:"https://github.com/bharani2624/FileManager"
         }
+
     ];
 
     const params = {
@@ -77,7 +84,7 @@ const ProjectCarousel = () => {
                             <div key={key} className="border-none flex flex-col overflow-x-hidden overflow-y-hidden p-5 bg-green-500/20 border rounded-lg backdrop-blur-xl" >
                                 <h1 className="font-semibold text-white h-28 md:h-20 lg:h-24">{data.title}</h1>
                                 <p className="text-lg text-green-500 text-left py-10">{data.description}</p>
-                                <p className="text-lg ml-0 absolute mt-64 md:mt-[240px] lg:mt-[220px] italic">{data.technology}</p>
+                                <p className="text-lg text-white ml-0 absolute mt-64 md:mt-[240px] lg:mt-[217px] italic">{data.technology}</p>
                                 <a href={data.link} target="_blank" rel="noopener noreferrer" className="text-green-500 absolute mt-72 md:mt-[265px] lg:mt-60 underline">
                                     Github
                                 </a>
